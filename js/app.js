@@ -110,6 +110,9 @@ var my_photos = [
 ];
 
 var Photos = React.createClass({
+	propTypes: {
+    	data: React.PropTypes.array.isRequired
+  	},
 	render:function(){
 		var data = this.props.data;
 		var photosTemplate;
