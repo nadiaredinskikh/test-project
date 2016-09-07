@@ -112,7 +112,9 @@ var my_photos = [
 var Photos = React.createClass({
 	render:function(){
 		var data = this.props.data;
-		var photosTemplate = data.map(function(item, index){
+		var photosTemplate;
+		if(data.length > 0){
+			photosTemplate = data.map(function(item, index){
 			return(
 			<div key={index} className="col-lg-3 col-md-5 col-xs-12 photos">
 				<figure>
@@ -125,15 +127,17 @@ var Photos = React.createClass({
 						<li className="photos__price">{item.price}</li>
 						<li className="photos__area">{item.area}</li>
 						<li className="photos__square">{item.square}&sup2;</li>
-					</ul>
-					
-				</div>
-				
+					</ul>					
+				</div>				
 				</figcaption>
 				</figure>
 			</div>
 			)
-		})
+			})
+		}else{
+			photosTemplate = <p>Информации нет.</p>
+		}
+		
 		return(
 			<div>
 				{photosTemplate}
