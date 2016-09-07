@@ -224,13 +224,14 @@ header p{
 	cursor: pointer;
 	background-color: #ffffff;	
 }
+
 .pagination__nav ul li:first-child, ul li:last-child{
 	border:none;
 }
 .pagination__nav ul li:first-child:hover, ul li:last-child:hover{
 	cursor: pointer;
 	background-color: #f5f5f5;
-}
-.pagination__nav ul li:first-child a:hover, ul li a:last-child:hover{
 	font-weight: bold;
+
 }
+	
